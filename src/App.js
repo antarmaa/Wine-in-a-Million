@@ -13,9 +13,11 @@ class App extends Component{
         </header>
         <div className="App-Component">
         <SearchBox/>  
+      
         <div className="App-Component">
           
         </div>
+        
     </div>
     </div>
   );

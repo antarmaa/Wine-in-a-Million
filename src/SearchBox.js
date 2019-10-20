@@ -62,13 +62,17 @@ this.state={
 
 async getDataFetch(){
 
-    const url = "http://10.166.91.74/suggest";
+    const url = "/suggest?q="+this.state.text;
     fetch(url)
         .then(res => {
             console.log(res);
             res.json();
         })
-        .then(data => this.setState({ data: data }))
+        .then(data => {
+            console.log("handling response from api")
+            this.setState({ data: data })
+            
+        })
         .catch((e) => {
             console.log(e, "error")
         });
@@ -110,16 +114,21 @@ suggestionsSelected(value){
             </ul>
         );
     }
-
-
-render(){
-    const{text}= this.state.text;
+    handleChange = (e)=> {
+        this.setState({text: e.target.value});
+      }
+    render(){
     return(
        
 <div className="SearchBox">
-<input value={text} onChange={this.onTextChanged}  type="text"/>
-</div>
 
+  
+<input value={this.state.text} onChange={this.handleChange} type="text"/>
+<div>
+    <button onClick={this.onTextChanged}>Search</button>
+    {this.props.text}
+</div>
+</div>
     )
 }
 }
