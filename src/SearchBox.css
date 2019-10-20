@@ -1,19 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 .SearchBox{
     width:100%;
-    border:1px solid grey;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),0 2px 4px 1px rgba(0,0,0,.18);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
     font-size: 14px;
     color:rgba(0,0,0,0.1);
 }
 .SearchBox input{
     width:100%;
-    border:none;
-    font-size: 14px;
+    border: none;
+    font-size: 18px;
     color:rgba(0,0,0,0.73);
     padding:10px 5px;
-    box-sizing:border-box;
+    box-sizing: border-box;
+    border-radius: 25px, 25px, 0px, 0px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),0 2px 4px 1px rgba(0,0,0,.18);
+}
 
+.SearchBox button {
+    /* background-color: red; */
+    background-color: #007a87;
+    color: #ffb500;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
 }
 
 .SearchBox ul{
@@ -21,6 +32,7 @@
     text-align:center;
     margin:0;
     padding:0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),0 2px 4px 1px rgba(0,0,0,.18);
 }
 .SearchBox ul::before{
     content:"";
@@ -28,11 +40,17 @@
 
 .SearchBox li{
     padding:10px 5px;
-
+    background-color: white;
+    color: black;
+    list-style: none;
+    font-weight: bold;
 }
 
 .SearchBox li:hover{
-    text-decoration:underline;
-
+    background-color: #efebe1;
 }
 
+#search {
+    text-align: center;
+    height: 50px;
+}
