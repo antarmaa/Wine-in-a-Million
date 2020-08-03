@@ -67,7 +67,7 @@ export default class SearchBox extends React.Component {
 
         this.setState({ api: [] })
 
-        const url = "/suggest?q=" + this.state.text;
+        const url = "https://wine-in-a-million.uc.r.appspot.com/suggest?q=" + this.state.text;
         axios.get(url)
             .then(response => {
                 console.log(response)
